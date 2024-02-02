@@ -3,6 +3,8 @@ package org.zerock.jdbcex.dao;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
+import java.sql.Connection;
+
 public enum ConnectionUtil {
 
     INSTANCE;
@@ -19,5 +21,10 @@ public enum ConnectionUtil {
         config.addDataSourceProperty("prepStmtCacheSqlLimit", "2048");
 
         ds = new HikariDataSource(config);
+    }
+
+
+    public Connection getConnection() throws Exception {
+        return ds.getConnection();
     }
 }
