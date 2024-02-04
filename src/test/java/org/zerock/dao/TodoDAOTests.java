@@ -20,7 +20,7 @@ public class TodoDAOTests {
 
     @Test
     public void testTime() throws Exception {
-        // System.out.println(todoDAO.getTime());
+        System.out.println(todoDAO.getTime());
         //mariaDB Failed to initialize pool: ERROR 1045 (28000): Access denied for user 발생
 
     }
