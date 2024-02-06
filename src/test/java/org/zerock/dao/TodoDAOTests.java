@@ -3,6 +3,9 @@ package org.zerock.dao;
 import org.zerock.jdbcex.dao.TodoDAO;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.zerock.jdbcex.domain.TodoVo;
+
+import java.time.LocalDate;
 
 public class TodoDAOTests {
 
@@ -30,4 +33,16 @@ public class TodoDAOTests {
     정상 동작하는지를 확인하도록 함
     *
     * */
+
+    @Test
+    public void testInsert() throws Exception {
+        TodoVo todoVo = TodoVo.builder()
+                .title("Sample Title...")
+                .dueDate(LocalDate.of(2021,12,31))
+                .build();
+
+        todoDAO.insert(todoVo);
+    }
+
+
 }
