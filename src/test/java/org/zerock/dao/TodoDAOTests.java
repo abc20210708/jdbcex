@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.zerock.jdbcex.domain.TodoVo;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public class TodoDAOTests {
 
@@ -44,5 +45,11 @@ public class TodoDAOTests {
         todoDAO.insert(todoVo);
     }
 
+    @Test
+    public void testList() throws Exception {
+        List<TodoVo> list = todoDAO.selectAll();
+
+        list.forEach(vo -> System.out.println(vo));
+    }
 
 }
