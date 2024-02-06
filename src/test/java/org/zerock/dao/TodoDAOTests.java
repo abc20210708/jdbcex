@@ -52,4 +52,12 @@ public class TodoDAOTests {
         list.forEach(vo -> System.out.println(vo));
     }
 
+    @Test
+    public void testSelectOne() throws Exception {
+        Long tno = 1L; // 반드시 존재하는 번호를 이용
+        // 만일 존재하지 않는 번호의 글을 조회한다면 예외가 발생
+        TodoVo vo = todoDAO.selectOne(tno);
+
+        System.out.println(vo);
+    }
 }
