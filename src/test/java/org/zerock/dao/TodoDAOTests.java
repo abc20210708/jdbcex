@@ -1,8 +1,8 @@
 package org.zerock.dao;
 
+import org.zerock.jdbcex.dao.TodoDAO;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.zerock.jdbcex.dao.TodoDAO;
 
 public class TodoDAOTests {
 
@@ -17,10 +17,11 @@ public class TodoDAOTests {
     To-doDAO 타입의 객체를 생성하도록 하고,
     *
     * */
-
+//안녕하세요 네넿
+    //제가 좀 제어하겠습니다. ㄷ그럼요
     @Test
     public void testTime() throws Exception {
-        //System.out.println(todoDAO.getTime());
+        System.out.println(todoDAO.getTime());
         //mariaDB Failed to initialize pool: ERROR 1045 (28000): Access denied for user 발생
 
     }
