@@ -47,5 +47,14 @@ public enum TodoService {
         return dtoList;
     }
 
+    public TodoDTO get(Long tno) throws Exception {
+
+        log.info("tno: " + tno);
+        TodoVo todoVo = dao.selectOne(tno);
+        TodoDTO todoDTO = modelMapper.map(todoVo, TodoDTO.class);
+        return todoDTO;
+
+    }
+
 
 }
